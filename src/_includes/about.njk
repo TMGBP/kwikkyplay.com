@@ -1,0 +1,52 @@
+<div id="about" class="pt-32">
+   {% set title = about.title %}
+   {% set description = about.description %}
+   {% include "sectionTitle.njk" %}
+   <div class="relative overflow-hidden rounded-xl lg:rounded-[32px] shadow-md lg:shadow-lg p-4 lg:pr-20 lg:pl-10 lg:py-20">
+      <div class="relative z-20 flex lg:gap-10 justify-between">
+         <img class="absolute lg:static self-center h-[115px] lg:h-auto top-8 -left-[45%] -z-10 pointer-events-none" src="{{ about.card_image }}" alt="card icon">
+         <div class="flex-1">
+            <h3 class="head-text font-2 font-bold about-heading"><span class="brand">{{ title }}</span> Casino</h3>
+            <div class="flex gap-0.5 lg:gap-1 mt-1 mb-3">
+               {% for i in range(0, 5) %}
+               <img src="../assets/star.svg" alt="⭐" class="size-4 md:size-7 pointer-events-none">
+               {% endfor %}
+            </div>
+            <ul class="text-balance list-disc pl-4 max-w-[250px]">
+               {% for benefit in about.benefits %}
+               <li class="benefits-text text-body font-medium">{{ benefit }}</li>
+               {% endfor %}
+            </ul>
+         </div>
+         <div class="flex flex-col gap-2.5 items-center justify-between">
+            <img class="w-full h-full pointer-events-none" src="{{ site.logo }}" alt="{{ title }}">
+            {% set text = about.bonus %}
+            {% set md_self_end = true %}
+            {% set link_path = 'claim-bonus' %}
+            {% include "cta-mini.njk" %}
+         </div>
+      </div>
+      <img class="absolute inset-0 w-full h-full object-cover pointer-events-none" src="{{ about.image }}" alt="{{ about.image_alt }}">
+   </div>
+</div>
+
+<style>
+   .about-heading {
+      font-size: {{ fonts.text_sizes.aboutHeadingSmall }};
+   }
+   @media (min-width: 768px) {
+      .about-heading {
+         font-size: {{ fonts.text_sizes.aboutHeading }};
+      }
+   }
+   
+   .head-text {
+      color: {{ colors.text.light }};
+   }
+   .brand {
+      color: {{ colors.accent }};
+   }
+   .benefits-text {
+      color: {{ colors.text.light }};
+   }
+</style>

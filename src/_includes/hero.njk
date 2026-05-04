@@ -1,0 +1,33 @@
+<div class="relative">
+   <img
+
+
+      class="hero-img rounded-none lg:rounded-[32px] scale-110 lg:scale-100 shadow-md lg:shadow-lg w-full h-[320px] md:h-[340px] lg:h-[500px] object-cover object-right pointer-events-none"
+      src="{{ hero.image }}"
+      alt="{{ hero.image_alt }}"
+   />
+   <div class="font-2 absolute top-5 left-0 md:top-12 lg:top-24 md:left-6 lg:left-12 z-10 mt-5 md:mt-0">
+      <p class="hero-text max-w-3xl mb-4 tracking-[-2%] uppercase text-[28px] md:text-[32px] lg:text-[50px] font-extrabold md:drop-shadow-md">
+         {% for part in hero.text %}
+            {% if loop.index0 == 0 %}
+               <span class="hero-title-highlight block text-[34px] md:text-[36px] lg:text-[60px]">{{ part }}</span>
+            {% else %}
+               {{ part }}
+            {% endif %}
+         {% endfor %}
+      </p>
+      {% include "cta-hero.njk" %}
+   </div>
+</div>
+
+<style>
+   .hero-text {      
+      color: {{ colors.text.light }};
+   }
+   .hero-title-highlight {
+      color: {{ colors.accent }};
+   }
+   .hero-img {
+      background-color: {{ colors.accent }};
+   }
+</style>

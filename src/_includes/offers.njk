@@ -1,0 +1,83 @@
+<div id="offers" class="pt-32 relative">
+   <div class="mb-8">
+      {% set title = offers.title %}
+      {% set description = offers.description %}
+      {% include "sectionTitle.njk" %}
+   
+      <div class="hidden md:grid grid-cols-2 gap-6">
+         {% for item in offers.list %}
+         <div class="relative">
+            <div class="w-full h-[360px] relative p-9 offers-text flex flex-col items-start justify-start gap-5">
+               <div class="flex-1 space-y-4">
+                  <span class="drop-shadow offers-deposit">{{ item.deposit }}</span>
+                  <p class="max-w-[300px] font-bold drop-shadow-md offers-title">{{ item.text }}</p>
+               </div>
+               {% set text = join %}
+               {% set link_path = 'claim-bonus' %}
+               {% include "cta-mini.njk" %}
+               <img class="absolute inset-0 -z-10 rounded-2xl w-full h-[360px] object-cover" src="{{ item.img }}" alt="{{ item.img_alt }}">
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+
+      <div class="block md:hidden pb-10">
+         <div class="swiper offers-mobile">
+            <div class="swiper-wrapper">
+               {% for item in offers.list %}
+               <div class="swiper-slide">
+                  <div class="relative">
+                     <div class="w-full min-h-[210px] md:h-[360px] relative p-6 offers-text flex flex-col items-start justify-start gap-5">
+                        <div class="flex-1 space-y-2">
+                           <span class="drop-shadow offers-deposit">{{ item.deposit }}</span>
+                           <p class="max-w-[170px] font-bold drop-shadow-md offers-title">{{ item.text }}</p>
+                        </div>
+                        {% set text = join %}
+                        {% set link_path = 'claim-bonus' %}
+                        {% include "cta-mini.njk" %}
+                        <img class="absolute inset-0 -z-10 rounded-2xl w-full h-full object-cover" src="{{ item.img }}" alt="{{ item.img_alt }}">
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </div>
+
+   {% set title = offers.claim.title %}
+   {% set variant = "small" %}
+   {% include "sectionTitle.njk" %}
+   
+   <ul class="list-decimal list-inside text-body">
+      {% for item in offers.claim.text %}
+         <li>{{ item }}</li>
+      {% endfor %}
+   </ul>
+</div>
+
+<style>
+   .offers-text {
+      color: {{ colors.text.light }};
+   }
+
+   .offers-deposit {
+      font-size: {{ fonts.text_sizes.offersDepositSmall }};
+   }
+
+   @media (min-width: 768px) {
+      .offers-deposit {
+         font-size: {{ fonts.text_sizes.offersDeposit }};
+      }
+   }
+
+   .offers-title {
+      font-size: {{ fonts.text_sizes.offersTitleSmall }};
+   }
+
+   @media (min-width: 768px) {
+      .offers-title {
+         font-size: {{ fonts.text_sizes.offersTitle }};
+      }
+   }
+</style>

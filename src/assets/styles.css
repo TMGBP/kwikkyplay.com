@@ -1,0 +1,37 @@
+@import "./menu.css";
+@import "./carousel.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+   @apply overflow-x-clip scroll-smooth;
+}
+
+.slot-iframe-wrapper {
+   @apply w-full rounded-xl overflow-hidden shadow-lg border border-slate-800 bg-black;
+}
+
+.slot-iframe-wrapper iframe {
+   width: 100%;
+   height: 400px;
+   display: block;
+}
+
+@media (min-width: 1024px) {
+   .slot-iframe-wrapper iframe {
+      height: 520px;
+   }
+}
+
+.slot-info-grid {
+   @apply grid grid-cols-1 gap-2 text-slate-300;
+}
+
+@media (min-width: 640px) {
+   .slot-info-grid {
+      @apply grid-cols-3;
+   }
+}

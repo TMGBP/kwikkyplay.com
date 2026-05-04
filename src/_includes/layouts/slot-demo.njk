@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang or 'en' }}">
+<head>
+    {% include "head.njk" %}
+</head>
+<body>
+    {% if tracking.googleTagManager and tracking.googleTagManager.id %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ tracking.googleTagManager.id }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+    {% set locale = page.lang or 'en' %}
+    {% include "navbar.njk" %}
+    <main class="container mx-auto max-w-5xl xl:max-w-6xl p-4 mt-12 relative">
+        <article class="prose prose-content text-body mx-auto max-w-prose prose-img:rounded-xl prose-img:shadow-md">
+            <header class="mb-6">
+                {% if title %}
+                <h1 class="text-3xl font-semibold mb-2">
+                    {{ title }}
+                </h1>
+                {% endif %}
+                {% if provider or rtp or volatility %}
+                <dl class="slot-info-grid mt-2 text-sm">
+                    {% if provider %}
+                    <div>
+                        <dt class="font-semibold">Provider</dt>
+                        <dd>{{ provider }}</dd>
+                    </div>
+                    {% endif %}
+                    {% if rtp %}
+                    <div>
+                        <dt class="font-semibold">RTP</dt>
+                        <dd>{{ rtp }}</dd>
+                    </div>
+                    {% endif %}
+                    {% if volatility %}
+                    <div>
+                        <dt class="font-semibold">Volatility</dt>
+                        <dd>{{ volatility }}</dd>
+                    </div>
+                    {% endif %}
+                </dl>
+                {% endif %}
+            </header>
+
+            {% if iframeSrc %}
+            <div class="slot-iframe-wrapper mb-8">
+                <iframe
+                    src="{{ iframeSrc }}"
+                    title="{{ title or 'Slot demo' }}"
+                    loading="lazy"
+                    allowfullscreen
+                    frameborder="0"
+                ></iframe>
+            </div>
+            {% endif %}
+
+            {{ content | safe }}
+        </article>
+    </main>
+    {% include "footer.njk" %}
+    <script type="module" src="/assets/script.js"></script>
+    <style>
+        .prose-content * {
+            color: {{ colors.text.primary }};
+        }
+    </style>
+</body>
+</html>
+
+
