@@ -1,0 +1,260 @@
+<section id="payment-options" class="pt-24 lg:pt-32">
+   <div class="max-w-7xl mx-auto">
+      <div class="max-w-5xl">
+         <span class="payment-options-kicker">Payment Guide</span>
+
+         <h2 class="section-title-small font-bold leading-tight mt-4 mb-5">{{ payment_options.title }}</h2>
+
+         <p class="text-body leading-relaxed payment-options-main-text">{{ payment_options.description }}</p>
+
+         {% if payment_options.extra_text %}
+         <p class="text-body leading-relaxed payment-options-extra-text">{{ payment_options.extra_text }}</p>
+         {% endif %}
+      </div>
+
+      <div class="payment-options-panel">
+         <div class="payment-options-panel-header">
+            <div>
+               <p class="payment-options-label">Deposit & Withdrawal Overview</p>
+
+               <p class="payment-options-subtitle">Compare the most common banking options before choosing your preferred method.</p>
+            </div>
+         </div>
+
+         <div class="relative payment-options-table-wrap">
+            <div class="payment-options-shade absolute pointer-events-none inset-y-0 -right-3 w-8 md:w-12 xl:hidden"></div>
+
+            <div class="overflow-x-auto">
+               <table class="payment-options-table w-full text-left">
+                  <thead>
+                     <tr>
+                        <th>{{ payment_options.columns.category }}</th>
+                        <th>{{ payment_options.columns.examples }}</th>
+                        <th>{{ payment_options.columns.deposit_speed }}</th>
+                        <th>{{ payment_options.columns.withdrawal_speed }}</th>
+                        <th>{{ payment_options.columns.pros }}</th>
+                        <th>{{ payment_options.columns.cons }}</th>
+                     </tr>
+                  </thead>
+
+                  <tbody>
+                     {% for row in payment_options.rows %}
+                     <tr>
+                        <td class="payment-options-category">
+                           <span>{{ row.category }}</span>
+                        </td>
+
+                        <td>{{ row.examples }}</td>
+
+                        <td>
+                           <span class="payment-options-speed"> {{ row.deposit_speed }} </span>
+                        </td>
+
+                        <td>{{ row.withdrawal_speed }}</td>
+
+                        <td>{% if row.pros %} {{ row.pros | join(", ") }} {% endif %}</td>
+
+                        <td>{% if row.cons %} {{ row.cons | join(", ") }} {% endif %}</td>
+                     </tr>
+                     {% endfor %}
+                  </tbody>
+               </table>
+            </div>
+         </div>
+
+         {% if payment_options.note %}
+         <p class="payment-options-note text-body-sm">{{ payment_options.note }}</p>
+         {% endif %}
+      </div>
+   </div>
+</section>
+
+<style>
+   #payment-options {
+      scroll-margin-top: 120px;
+   }
+
+   .payment-options-main-text {
+      margin-bottom: 0;
+   }
+
+   .payment-options-extra-text {
+      margin-top: 34px;
+      margin-bottom: 0;
+   }
+
+   .payment-options-panel {
+      margin-top: 46px;
+      padding: 18px;
+      border-radius: 26px;
+      background: radial-gradient(circle at top left, rgba(255, 116, 79, 0.24), transparent 34%),
+         linear-gradient(135deg, #fff4ed 0%, #ffe8dd 48%, #fff8f4 100%);
+      border: 1px solid rgba(255, 116, 79, 0.28);
+      box-shadow: 0 18px 45px rgba(255, 116, 79, 0.16);
+      overflow: hidden;
+   }
+
+   .payment-options-kicker {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: #fff2ec;
+      border: 1px solid #ff8b63;
+      color: #ff5f35;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+   }
+
+   .payment-options-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 4px 4px 0;
+   }
+
+   .payment-options-label {
+      margin: 0;
+      color: #101010;
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 800;
+   }
+
+   .payment-options-subtitle {
+      margin: 6px 0 0;
+      color: rgba(16, 16, 16, 0.68);
+      font-size: 15px;
+      line-height: 1.5;
+   }
+
+   .payment-options-table-wrap {
+      margin-top: 22px;
+   }
+
+   .payment-options-table {
+      min-width: 980px;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+   }
+
+   .payment-options-table th {
+      padding: 14px 16px;
+      color: rgba(16, 16, 16, 0.62);
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.035em;
+      vertical-align: bottom;
+      white-space: normal;
+   }
+
+   .payment-options-table td {
+      padding: 18px 16px;
+      background: rgba(255, 255, 255, 0.94);
+      color: #101010;
+      font-size: 15px;
+      line-height: 1.45;
+      vertical-align: middle;
+      border-top: 1px solid rgba(255, 116, 79, 0.16);
+      border-bottom: 1px solid rgba(255, 116, 79, 0.16);
+   }
+
+   .payment-options-table tbody tr td:first-child {
+      border-left: 1px solid rgba(255, 116, 79, 0.16);
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+   }
+
+   .payment-options-table tbody tr td:last-child {
+      border-right: 1px solid rgba(255, 116, 79, 0.16);
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+   }
+
+   .payment-options-table tbody tr {
+      transition: transform 0.2s ease;
+   }
+
+   .payment-options-table tbody tr:hover {
+      transform: translateY(-2px);
+   }
+
+   .payment-options-table tbody tr:hover td {
+      background: #ffffff;
+      box-shadow: 0 10px 24px rgba(255, 116, 79, 0.14);
+   }
+
+   .payment-options-category span {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #fff2ec;
+      color: #ff5f35;
+      font-weight: 900;
+      white-space: nowrap;
+      border: 1px solid rgba(255, 116, 79, 0.22);
+   }
+
+   .payment-options-speed {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 32px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: #18d66b;
+      color: #06110a;
+      font-weight: 900;
+      white-space: nowrap;
+   }
+
+   .payment-options-note {
+      margin-top: 22px;
+      color: rgba(16, 16, 16, 0.68);
+      line-height: 1.6;
+      padding: 0 4px 2px;
+   }
+
+   .payment-options-shade {
+      background: linear-gradient(to left, #fff4ed, rgba(255, 244, 237, 0));
+      z-index: 2;
+   }
+
+   @media (max-width: 767px) {
+      .payment-options-extra-text {
+         margin-top: 28px;
+      }
+
+      .payment-options-panel {
+         margin-top: 38px;
+         padding: 14px;
+         border-radius: 22px;
+      }
+
+      .payment-options-table {
+         min-width: 920px;
+      }
+
+      .payment-options-table th {
+         font-size: 12px;
+         padding: 12px 12px;
+      }
+
+      .payment-options-table td {
+         font-size: 14px;
+         padding: 15px 12px;
+      }
+
+      .payment-options-label {
+         font-size: 16px;
+      }
+   }
+</style>

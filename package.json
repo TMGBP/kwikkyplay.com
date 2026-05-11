@@ -1,5 +1,5 @@
 {
-   "name": "cage-template-2-payments-v1.3",
+   "name": "kwikkyplay.com",
    "version": "1.0.0",
    "main": ".eleventy.js",
    "scripts": {
@@ -12,7 +12,7 @@
       "@11ty/eleventy": "^2.0.0",
       "@tailwindcss/typography": "^0.5.16",
       "autoprefixer": "^10.4.0",
-      "luxon": "^3.5.0",
+      "luxon": "^3.7.2",
       "npm-run-all": "^4.1.5",
       "postcss": "^8.4.0",
       "prettier": "^3.4.2",
