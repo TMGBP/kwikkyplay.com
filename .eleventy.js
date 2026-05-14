@@ -27,6 +27,19 @@ module.exports = function (eleventyConfig) {
       return DateTime.fromJSDate(dateObj).toFormat(format)
    })
 
+   /** Join site base URL (with or without trailing slash) and a path that starts with `/`. */
+   eleventyConfig.addFilter("absoluteUrl", (baseUrl, urlPath) => {
+      const base = String(baseUrl ?? "").replace(/\/+$/, "")
+      let pathname = String(urlPath ?? "/")
+      if (!pathname.startsWith("/")) pathname = `/${pathname}`
+      return `${base}${pathname}`
+   })
+
+   eleventyConfig.addFilter("jsonString", value =>
+      JSON.stringify(value ?? "")
+         .replace(/</g, "\\u003c")
+   )
+
    eleventyConfig.addNunjucksGlobal("getCurrentDate", () => {
       return DateTime.now().toFormat("yyyy-MM-dd")
    })

@@ -1,7 +1,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ title }}</title>
-<meta name="description" content="{{ meta_description }}" />
+{% set pageDescription = meta_description or site.description %}
+<meta name="description" content="{{ pageDescription }}" />
 <link rel="icon" href="{{ site.favicon }}" sizes="any" />
 <link rel="icon" href="{{ site['favicon-svg'] }}" type="image/svg+xml" />
 
@@ -49,29 +50,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="/assets/output.css" />
 <meta name="robots" content="{% if robots == "disallow" %}noindex, nofollow{% else %}index, follow{% endif %}" />
 
-{% set hreflangsData = readJSON("src/_data/hreflangs.json") %}
-{% set defaultHreflang = hreflangsData.default %}
-{% set hreflangs = hreflangsData.languages %}
+{% set absUrl = site.url | absoluteUrl(page.url | url) %}
+{% set siteRootUrl = site.url | absoluteUrl("/") %}
+{% set shareImageAbs = site.url | absoluteUrl(site.social_image) %}
 
-<link rel="canonical" href="{{ site.url }}" />
-<link rel="alternate" hreflang="{{ defaultHreflang.lang }}" href="{{ defaultHreflang.url }}" data-rh="true" />
-{% for hreflang in hreflangs %}
+<link rel="canonical" href="{{ absUrl }}" />
+<link rel="alternate" hreflang="x-default" href="{{ absUrl }}" data-rh="true" />
+<link rel="alternate" hreflang="en" href="{{ absUrl }}" data-rh="true" />
+{% set hreflangsData = readJSON("src/_data/hreflangs.json") %}
+{% for hreflang in hreflangsData.languages %}
 <link rel="alternate" hreflang="{{ hreflang.lang }}" href="{{ hreflang.url }}" data-rh="true" />
 {% endfor %}
 
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url | absoluteUrl('/sitemap.xml') }}" />
+
 <meta property="og:title" content="{{ title }}" />
-<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:description" content="{{ pageDescription }}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="{{ page.url }}" />
-<meta property="og:image" content="{{ site.og_image }}" />
+<meta property="og:url" content="{{ absUrl }}" />
+<meta property="og:image" content="{{ shareImageAbs }}" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="{{ site.twitter_site }}" />
 <meta name="twitter:title" content="{{ title }}" />
-<meta name="twitter:description" content="{{ site.description }}" />
-<meta name="twitter:image" content="{{ site.twitter_image }}" />
+<meta name="twitter:description" content="{{ pageDescription }}" />
+<meta name="twitter:image" content="{{ shareImageAbs }}" />
 <meta name="date" content="{{ getCurrentDate() }}" scheme="YYYY-MM-DD" />
 <meta name="last-modified" content="{{ getLastModifiedDate(page.inputPath) }}" scheme="YYYY-MM-DD" />
 <meta itemprop="datePublished" content="{{ getCurrentDate() }}" />
 <meta itemprop="dateModified" content="{{ getLastModifiedDate(page.inputPath) }}" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": {{ (siteRootUrl ~ '#website') | jsonString | safe }},
+      "url": {{ siteRootUrl | jsonString | safe }},
+      "name": {{ site.name | jsonString | safe }}
+    },
+    {
+      "@type": "WebPage",
+      "@id": {{ (absUrl ~ '#webpage') | jsonString | safe }},
+      "url": {{ absUrl | jsonString | safe }},
+      "name": {{ title | jsonString | safe }},
+      "description": {{ pageDescription | jsonString | safe }},
+      "inLanguage": {{ (page.lang or 'en') | jsonString | safe }},
+      "isPartOf": { "@id": {{ (siteRootUrl ~ '#website') | jsonString | safe }} }
+    }
+  ]
+}
+</script>
 <style>
   body {
     background-color: {{ colors.background }};

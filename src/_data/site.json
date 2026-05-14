@@ -1,10 +1,14 @@
 {
-   "url": "https://www.kwikkyplay.com/",
+   "url": "https://www.kwikkyplay.com",
+   "name": "Kwikky Casino",
+   "description": "Kwikky Casino — fast payments, trusted methods, slots and live games, and 24/7 support.",
    "favicon": "/assets/logo.png",
    "favicon-svg": "/assets/logo.png",
    "logo": "/assets/kwikkylogo.svg",
+   "social_image": "/assets/logo.png",
+   "twitter_site": "@kwikkyplay",
    "langs": ["en"],
    "affiliate_links": {
-      "linkEN": "https://record.babaffiliates.com/_aMOt-RH8u6PUOsjNOfgKeWNd7ZgqdRLk/1"
+      "linkEN": "https://record.babaffiliates.com/_aMOt-RH8u6PUOsjNOfgKeWNd7ZgqdRLk/5/?utm_source=seo&utm_medium=bp&utm_campaign=kwikkyplay.com"
    }
 }

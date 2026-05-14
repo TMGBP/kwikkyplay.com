@@ -1,7 +1,9 @@
 ---
 layout: ""
-permalink: "{{locale}}/pages/contact-us/index.html"
+permalink: "{{locale}}/contact-us/index.html"
 robots: "disallow"
+title: "Contact Us | Kwikky Casino"
+meta_description: "Continue to Kwikky Casino to reach support and contact options."
 ---
 
 <!doctype html>
@@ -9,14 +11,12 @@ robots: "disallow"
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title></title>
-      <meta name="robots" content="noindex" />
+      {% include "affiliate-redirect-head.njk" %}
+      <meta name="robots" content="noindex, nofollow" />
       <script>
          window.onload = function () {
             const rawAffiliateUrl = "{{ site.affiliate_links.linkEN | trim }}"
-            const affiliateUrl = rawAffiliateUrl
-               .replaceAll("&amp;", "&")
-               .replaceAll("&#38;", "&")
+            const affiliateUrl = rawAffiliateUrl.replaceAll("&amp;", "&").replaceAll("&#38;", "&")
             window.location.replace(affiliateUrl)
          }
       </script>

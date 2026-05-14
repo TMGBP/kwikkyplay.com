@@ -47,11 +47,11 @@
             },
             {
                "label": "Support",
-               "url": "/{{locale}}/pages/support"
+               "url": "/{{locale}}/support/"
             },
             {
                "label": "Contact Us",
-               "url": "/{{locale}}/pages/contact-us"
+               "url": "/{{locale}}/contact-us/"
             }
          ]
       },
@@ -60,15 +60,15 @@
          "links": [
             {
                "label": "Privacy Policy",
-               "url": "en/pages/privacy-policy/"
+               "url": "/{{locale}}/privacy-policy/"
             },
             {
                "label": "Terms of Service",
-               "url": "en/pages/terms-and-conditions/"
+               "url": "/{{locale}}/terms-and-conditions/"
             },
             {
                "label": "Responsible Gaming",
-               "url": "en/pages/responsible-gaming/"
+               "url": "/{{locale}}/responsible-gaming/"
             }
          ]
       }

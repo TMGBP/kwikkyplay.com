@@ -1,7 +1,9 @@
 ---
 layout: ""
-permalink: "{{locale}}/pages/support/index.html"
+permalink: "{{locale}}/support/index.html"
 robots: "disallow"
+title: "Support | Kwikky Casino"
+meta_description: "Continue to Kwikky Casino for help, live chat, and account support options."
 ---
 
 <!doctype html>
@@ -9,8 +11,8 @@ robots: "disallow"
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title></title>
-      <meta name="robots" content="noindex" />
+      {% include "affiliate-redirect-head.njk" %}
+      <meta name="robots" content="noindex, nofollow" />
       <script>
          window.onload = function () {
             const rawAffiliateUrl = "{{ site.affiliate_links.linkEN | trim }}"

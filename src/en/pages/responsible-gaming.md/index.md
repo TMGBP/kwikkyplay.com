@@ -2,7 +2,7 @@
 layout: content.njk
 title: "Responsible Gaming | Play Safely and Stay in Control"
 meta_description: "Learn practical responsible gaming tips, how to set limits, when to take a break, self-exclusion options, and where to find support for safer gambling."
-permalink: "en/pages/responsible-gaming/"
+permalink: "en/responsible-gaming/"
 join: "Claim Bonus"
 nav_cta: "Register"
 ---

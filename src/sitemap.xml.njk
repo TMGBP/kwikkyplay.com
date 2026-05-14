@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
     {% for page in collections.all %}
         {%- if page.data.robots != "disallow"  %}
             <url>
-                <loc>{{ site.url }}{{ page.url | url }}</loc>
+                <loc>{{ site.url | absoluteUrl(page.url | url) }}</loc>
                 <lastmod>{{ page.date | date("yyyy-MM-dd") }}</lastmod>
             </url>
         {%- endif %}

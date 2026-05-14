@@ -10,7 +10,7 @@
                 {% for item in navItems %}
                 <li class="nav-item text-nav transition-colors duration-300">
                     {% if item.type == "content" %}
-                    <a href="/{{ page.lang }}/pages/{{ item.slug }}/index.html">{{ item.label }}</a>
+                    <a href="/{{ page.lang }}/{{ item.slug }}/">{{ item.label }}</a>
                     {% elif isHomePage %}
                     <a href="#{{ item.slug }}">{{ item.label }}</a>
                     {% else %}

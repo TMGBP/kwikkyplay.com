@@ -1,12 +1,3 @@
 {
-   "default": {
-      "url": "https://www.kwikkyplay.com/",
-      "lang": "x-default"
-   },
-   "languages": [
-      {
-         "lang": "en",
-         "url": "https://www.kwikkyplay.com/en"
-      }
-   ]
+   "languages": []
 }
