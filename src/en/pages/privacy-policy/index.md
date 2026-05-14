@@ -2,7 +2,7 @@
 layout: content.njk
 title: "Privacy Policy | Data Protection & User Privacy"
 meta_description: "Learn how we collect, use, and protect personal data, including contact details, technical information, cookies, analytics, user rights, and data protection practices."
-permalink: "en/privacy-policy"
+permalink: "en/pages/privacy-policy"
 join: "Claim Bonus"
 nav_cta: "Register"
 ---

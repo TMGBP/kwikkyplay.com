@@ -191,7 +191,7 @@ games:
            alt: "casino game"
 providers:
    title: "Featured Software Providers"
-   description: "Kwikky Casino supports a variety of secure and user-friendly payment methods to ensure smooth transactions. Players can deposit and withdraw using debit cards, e-wallets, bank transfers, and other trusted options. With fast processing times and no hidden fees, managing your funds at Kwikky is both convenient and reliable."
+   description: "Kwikky Casino gives players a few common ways to pay. Cards, e-wallets, bank transfers, and other trusted choices may be shown in the cashier, depending on where you are playing from. The goal is simple enough: put money in without trouble, request a cash-out when needed, and see the main payment details before you confirm anything."
    cta: "Learn More"
 
 about:
@@ -199,7 +199,7 @@ about:
    image: "/assets/frontbanner.jpg"
    image_alt: "promo image alt"
    title: "About Kwikky"
-   description: "Launched in 2026, Kwikky Casino is your go-to destination for top-tier casino games. Featuring over 2,000 slots and live dealer games, regular promotions, and the much-hyped KWIKK withdrawals, this casino is all about convenience. Whether you’re playing on your phone or desktop, Kwikky ensures fast transactions, multilingual support, and 24/7 assistance - so you can focus on what matters the most - having fun!"
+   description: "Kwikky Casino opened in 2026 and keeps the focus on games, payments, and support. The lobby has more than 2,000 slots and live dealer titles, plus regular offers for players who want something extra. KWIKK withdrawals are a big part of the site’s pitch. You can use the casino on mobile or desktop, and help is available day and night if you get stuck."
    benefits:
       - "Play with friends"
       - "Play for free"
@@ -208,7 +208,7 @@ about:
 
 offers:
    title: "Promotional Offers & Bonuses"
-   description: "Kwikky Casino offers a dynamic range of bonuses designed to reward both new and loyal players. From generous welcome packages and free spins to cashback offers and weekly reloads, there's always something to boost your gameplay. These promotions are crafted to extend your playtime, reduce risk, and add excitement to every session."
+   description: "Kwikky Casino has bonuses for new sign-ups and existing players. These may include a welcome deal, free spins, cashback, or reload offers. A bonus can be useful, but it is not something to click blindly. Check the wagering rules, time limit, and game list first."
    list:
       [
          { deposit: "Welcome Package", text: "GET 100% up to €200", img: "/assets/bonus3.png", img_alt: "Kwikky casino First Deposit Bonus" },
@@ -216,7 +216,7 @@ offers:
       ]
    claim:
       title: "How to Get Your Bonus"
-      description: "Kwikky Casino offers a dynamic range of bonuses designed to reward both new and loyal players. From generous welcome packages and free spins to cashback offers and weekly reloads, there's always something to boost your gameplay. These promotions are crafted to extend your playtime, reduce risk, and add excitement to every session."
+      description: "To claim a bonus, start by opening an account. Then make a deposit if the offer needs one, and activate the deal from the promotion area or cashier. Before playing, take a quick look at the terms so you know what counts toward the bonus."
       text:
          - "Register an account"
          - "Make a deposit"
@@ -224,7 +224,7 @@ offers:
 
 payments:
    title: "Available Payment Methods"
-   description: "To make your experience more seamless, Kwikky Casino supports most of the standard payment options. Here's a quick overview of payments at the casino -"
+   description: "Payment choices at Kwikky Casino can change by country and account type. Open the cashier to see the methods available to you, along with the limits and expected processing times."
    deposit_time: "Deposit Time"
    withdrawal_time: "Withdrawal Time"
    day: "day"
@@ -232,34 +232,34 @@ payments:
 
 theme_design:
    title: "Mobile & Website User Experience"
-   description: "Kwikky Casino features a modern and intuitive design with a vibrant theme that creates an immersive gaming experience. The user-friendly interface makes navigation seamless across all devices."
+   description: "Kwikky Casino has a bright layout that is fairly easy to move through. The main areas, like games, wallet, bonuses, and support, are kept close by. That helps on mobile, where too many menus can quickly become annoying."
    images:
       mobile: "/assets/mob.png"
       desktop: "/assets/desktop.png"
 
 faq:
    title: "Frequently Asked Questions"
-   description: "Here are some of the FAQs about payments that you may encounter -"
+   description: "A few common payment questions are answered below."
    faqs:
       - question: "Is there a deposit fee at Kwikky Casino?"
-        answer: "No, at the time of writing, there is no deposit fee at Kwikky Casino"
+        answer: "No. At the time of writing, Kwikky Casino does not charge a fee for deposits."
       - question: "What is Kwikky Casino withdrawal time?"
-        answer: "While the casino site promises to provide quick withdrawals, the final withdrawal time depends on your chosen payment method."
+        answer: "Kwikky aims to handle withdrawals quickly, but the exact time depends on your payment method and whether your account needs any checks first."
       - question: "Can we use crypto at Kwikky Casino?"
-        answer: "At this time, the online casino does not support cryptocurrency payments, but updates may follow."
+        answer: "No. Cryptocurrency payments are not supported at the moment. The casino may add more options later."
       - question: "Is Kwikky Casino safe and secure?"
-        answer: "Yes, Kwikkty Casino employs state-of-the-art security measures and encryption technology to ensure all player data and transactions are protected."
+        answer: "Yes. Kwikky Casino uses security tools and encryption to help protect player accounts, payment details, and personal information."
 
 support:
    help_title: "Need Help?"
    langs_title: "Supported Languages"
    license_title: "License and Securiy"
    gaming_title: "Gamble Responsibly"
-   license_text: "Yes, Kwikky Casino is licensed and regulated by the Malta Gaming Authority. The platform is committed to providing a safe and secure gaming environment for players. The casino site also promotes responsible gaming and offer various tools and resources to help players manage their gambling habits."
-   gaming_text: "Just like other online casinos, Kwikky Casino encourages responsible gaming and provide players with tools to help them manage their gambling habits. Players can set deposit limits, session limits, and self-exclude if needed. The site also provide links to organizations that offer support and assistance for problem gambling."
+   license_text: "Kwikky Casino is licensed and regulated by the Malta Gaming Authority. The site also includes account tools that can help players stay in control, such as limits and other safer gambling options."
+   gaming_text: "Kwikky Casino encourages players to treat gambling as paid entertainment, not a way to make money. Players can use tools such as deposit limits, session limits, reality checks, and self-exclusion. Support links are also available for anyone who feels their gambling is becoming hard to manage."
    list:
-      - "24/7 Live Chat Support: Receive instant assistance 24/7 from our experts"
-      - "Email Support: Send detailed inquiries, and we'll respond promptly"
+      - "24/7 Live Chat Support: Contact the team at any time"
+      - "Email Support: Send your question and wait for a reply"
    gaming_icons:
       - title: "Deposit Limits"
         image: "../assets/Deposit Limits icon.svg"
@@ -273,8 +273,8 @@ support:
 
 payment_options:
    title: "Different Types of Payment Options"
-   description: "Kwikky Casino gives players several ways to manage deposits and withdrawals, including cards, e-wallets, bank transfers, and prepaid options. Each payment type has different strengths, so the best choice depends on whether you value speed, privacy, higher limits, or simple day-to-day convenience."
-   extra_text: "Deposits are usually designed to be quick so players can access games without delay, while withdrawal times may vary depending on the selected method, verification checks, and the provider used. Always review the cashier before making a payment, as available methods can differ by country."
+   description: "There is no single best payment method for every player. Some people want the fastest deposit. Others care more about cash-out speed, privacy, or keeping spending under control. Kwikky Casino may show cards, e-wallets, bank transfers, and prepaid options in the cashier."
+   extra_text: "Deposits are usually faster because the money is going into your casino balance. Withdrawals can take longer. The casino may need to check your account, and the payment provider or bank can also add extra time. Before you pay, look at the cashier for the current methods, limits, and timing in your country."
    note: "Payment availability, limits, bonus eligibility, and processing times may vary depending on your location, account status, and selected payment provider."
    columns:
       category: "Category"
@@ -289,99 +289,100 @@ payment_options:
         deposit_speed: "Instant"
         withdrawal_speed: "Fast, usually within 24h"
         pros:
-           - "Fast transactions"
-           - "Extra privacy"
-           - "Easy to use"
+           - "Quick for most payments"
+           - "Keeps casino payments away from your main card"
+           - "Easy if you already use one"
         cons:
-           - "May not qualify for some bonuses"
-           - "Requires account setup"
+           - "Some bonuses may not allow e-wallet deposits"
+           - "You need to set up a wallet account"
 
       - category: "Debit/Credit Cards"
         examples: "Visa, Mastercard"
         deposit_speed: "Instant"
         withdrawal_speed: "2–5 business days"
         pros:
-           - "Widely accepted"
-           - "Familiar payment flow"
-           - "Strong payment protections"
+           - "Simple and familiar"
+           - "Often shown in casino cashiers"
+           - "Card payments have built-in protections"
         cons:
-           - "Slower withdrawals"
-           - "Some banks may block gambling payments"
+           - "Withdrawals may take a few days"
+           - "Some banks block gambling payments"
 
       - category: "Bank Transfer"
         examples: "Trustly, POLi, manual transfer"
         deposit_speed: "Varies, usually instant to 1 day"
         withdrawal_speed: "2–5 business days"
         pros:
-           - "Secure"
-           - "No third-party apps needed"
-           - "Higher limits"
+           - "Works straight through your bank"
+           - "No wallet account needed"
+           - "Can suit larger payments"
         cons:
-           - "Can be slower than other options"
-           - "Bank approval may be required"
+           - "Not always quick"
+           - "Bank approval may slow things down"
 
       - category: "Prepaid Cards"
         examples: "Paysafecard, Neosurf"
         deposit_speed: "Instant"
         withdrawal_speed: "N/A"
         pros:
-           - "Good for budgeting"
-           - "No bank card required"
-           - "Simple deposit process"
+           - "Good for setting a spending limit"
+           - "No bank card details needed"
+           - "Fast for deposits"
         cons:
-           - "Cannot usually withdraw"
-           - "Limited denominations"
+           - "Usually cannot be used for withdrawals"
+           - "You are limited by voucher amounts"
+
 how_to_deposit:
    eyebrow: "Deposit Guide"
    title: "How to Deposit at Kwikky Casino"
-   description: "Making a deposit at Kwikky Casino is designed to be simple, visual, and quick. Follow the steps below to open the cashier, choose your preferred payment method, enter your amount, and confirm your deposit."
+   description: "Depositing is a short cashier process. Log in, open your wallet, choose a payment option, enter the amount, and confirm the payment."
    note: "Deposit options, limits, bonuses, and processing times may vary depending on your country, selected payment method, and account verification status."
    steps:
       - number: "01"
         title: "Open your wallet"
-        description: "After logging in, click the green balance button in the top-right corner of the casino lobby. This opens your wallet and lets you start the deposit process."
+        description: "Log in and click the green balance button in the top-right corner of the lobby. This opens the wallet area."
         image: "/assets/dep1.png"
         image_alt: "Kwikky Casino lobby showing the wallet balance button"
 
       - number: "02"
         title: "Choose Deposit and select a payment method"
-        description: "In the wallet popup, make sure the Deposit tab is selected. Then choose your preferred payment method, such as MuchBetter or Visa / Mastercard."
+        description: "Select the Deposit tab in the wallet popup. Then choose one of the payment methods shown, such as MuchBetter or Visa / Mastercard."
         image: "/assets/dep2.png"
         image_alt: "Kwikky Casino wallet popup showing deposit payment methods"
 
       - number: "03"
         title: "Enter the amount and confirm"
-        description: "Enter your deposit amount, review the available offer if shown, and press the Deposit button to continue with the payment confirmation."
+        description: "Type the amount you want to add. Check the payment details and any offer shown on the screen, then press Deposit to continue."
         image: "/assets/dep3.png"
         image_alt: "Kwikky Casino deposit screen showing amount selection and deposit button"
 
 how_to_withdraw:
    eyebrow: "Withdrawal Guide"
    title: "How to Withdraw from Kwikky Casino"
-   description: "Cashing out at Kwikky Casino follows a simple step-by-step process. Open your wallet, switch to withdrawals, choose the available withdrawal method, enter your amount, and confirm the request."
+   description: "To cash out, go back to your wallet and open the withdrawal section. Choose the method shown to you, enter the amount, fill in any details needed, and send the request."
    note: "Withdrawal options, limits, verification checks, and processing times may vary depending on your country, payment method, and account status. Some withdrawals may need to be reviewed before they are completed."
    steps:
       - number: "01"
         title: "Open your wallet"
-        description: "After logging in, click the green balance button in the top-right corner of the casino lobby to open your wallet."
+        description: "After logging in, click the green balance button in the top-right corner of the casino lobby. Your wallet will open."
         image: "/assets/img1.png"
         image_alt: "Kwikky Casino lobby showing the wallet balance button"
 
       - number: "02"
         title: "Switch to Withdraw"
-        description: "Inside the wallet popup, select the Withdraw tab. This opens the withdrawal area where available cash-out options are displayed."
+        description: "In the wallet popup, click Withdraw. The cashier will show the cash-out methods available on your account."
         image: "/assets/img2.png"
         image_alt: "Kwikky Casino wallet popup showing the withdraw tab"
 
       - number: "03"
         title: "Choose your withdrawal method"
-        description: "Select the available withdrawal method shown in your cashier. In many cases, withdrawals may need to use the same or related payment method used for deposits."
+        description: "Pick the withdrawal option shown in the cashier. You may be asked to use the same method, or a linked method, that you used for your deposit."
         image: "/assets/img3.png"
         image_alt: "Kwikky Casino withdrawal screen showing available withdrawal methods"
 
       - number: "04"
         title: "Enter the amount and confirm"
-        description: "Enter the amount you want to withdraw, add any required details, then confirm your withdrawal request to complete the process."
+        description: "Enter the amount you want to withdraw. Add any requested details, check everything once, and confirm the request."
         image: "/assets/img4.png"
         image_alt: "Kwikky Casino withdrawal screen showing amount and confirmation button"
 ---

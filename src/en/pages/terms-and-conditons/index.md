@@ -2,7 +2,7 @@
 layout: content.njk
 title: "Terms and Conditions | Website Rules & User Agreement"
 meta_description: "Read the terms and conditions for using this website, including user responsibilities, third-party links, and important policies."
-permalink: "en/terms-and-conditions/"
+permalink: "en/pages/terms-and-conditions/"
 join: "Claim Bonus"
 nav_cta: "Register"
 ---

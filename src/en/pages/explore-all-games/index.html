@@ -1,6 +1,7 @@
 ---
 layout: ""
 permalink: "{{locale}}/pages/explore-all-games/index.html"
+robots: "disallow"
 ---
 
 <!doctype html>
@@ -13,9 +14,7 @@ permalink: "{{locale}}/pages/explore-all-games/index.html"
       <script>
          window.onload = function () {
             const rawAffiliateUrl = "{{ site.affiliate_links.linkEN | trim }}"
-            const affiliateUrl = rawAffiliateUrl
-               .replaceAll("&amp;", "&")
-               .replaceAll("&#38;", "&")
+            const affiliateUrl = rawAffiliateUrl.replaceAll("&amp;", "&").replaceAll("&#38;", "&")
             window.location.replace(affiliateUrl)
          }
       </script>

@@ -60,15 +60,15 @@
          "links": [
             {
                "label": "Privacy Policy",
-               "url": "en/privacy-policy/"
+               "url": "en/pages/privacy-policy/"
             },
             {
                "label": "Terms of Service",
-               "url": "en/terms-and-conditions/"
+               "url": "en/pages/terms-and-conditions/"
             },
             {
                "label": "Responsible Gaming",
-               "url": "en/responsible-gaming/"
+               "url": "en/pages/responsible-gaming/"
             }
          ]
       }
